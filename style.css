@@ -1,9 +1,146 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Manrope:wght@400;700&display=swap');
 
-root: {
+:root {
     --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
     --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
     --Grayish-Blue: hsl(212, 23%, 69%);
     --Light-Grayish-Blue: hsl(210, 46%, 95%);
     }
 
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+    background-color: var(--Light-Grayish-Blue);
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: Manrope, sans-serif;
+    font-size: 13px;
+}
+
+.content-card {
+    background-color: white;
+    width: 90%;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.content-card img {
+    width: 100%;
+}
+
+.content-text {
+    display: block;
+    padding: 1em;
+}
+
+h1 {
+    display: block;
+    font-size: 1.4em;
+    font-weight: 700;
+    color: var(--Very-Dark-Grayish-Blue);
+}
+
+.content-text p {
+    display: block;
+    font-size: 1em;
+    color: var(--Desaturated-Dark-Blue);
+}
+
+.content-footer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 1em 0;
+}
+
+.content-footer.on {
+    background-color: var(--Very-Dark-Grayish-Blue);
+}
+
+.content-profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 1em;
+}
+
+.content-profile img {
+    border-radius: 50%;
+}
+
+.content-info {
+    padding-left: 0.5em;
+    font-size: 0.8em;
+}
+
+.content-info p {
+    margin: 0;
+    color: var(--Very-Dark-Grayish-Blue);
+}
+
+.content-info span {
+    color: var(--Grayish-Blue);
+}
+
+.content-profile img {
+    width: 20%;
+}
+
+.content-socials {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    gap: 0.5em;
+    margin-left: 1em;
+    width: 50%;
+}
+
+.content-socials span {
+    color: var(--Grayish-Blue);
+    min-width: 50px;
+    font-size: 0.7rem;
+}
+
+.icon {
+    font-size: 1.2rem;
+    padding-left: 0.5em;
+}
+
+.content-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 1.5em;
+    width: 65%;
+}
+
+.content-footer .content-btn .btn {
+    display: block;
+    padding: 0.5em;
+    background-color: var(--Light-Grayish-Blue);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.content-footer.on .content-btn .btn {
+    background-color: var(--Desaturated-Dark-Blue);
+}
+
+.content-footer.on .content-btn .btn svg path {
+    fill: white;
+}
+
+.content-footer.on .content-btn {
+    width: 40%;
+}
+
+.content-footer.on .content-profile {
+    display: none;
+}
+
+.content-footer.off .content-socials {
+    display: none;
+}
